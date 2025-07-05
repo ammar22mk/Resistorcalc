@@ -1,0 +1,142 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 1rem;
+}
+
+.calculator {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.band-selector {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.band-selector label {
+    cursor: pointer;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+}
+
+.band-selector input[type="radio"] {
+    display: none;
+}
+
+.band-selector input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.instructions {
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.resistor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    height: 100px;
+}
+
+/* --- SVG STYLES --- */
+.resistor-svg {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+.resistor-svg .wire { fill: #a9a9a9; }
+.resistor-svg .bg-shadow { fill: #cfb38c; }
+.resistor-svg .bg { fill: #e8cba2; }
+.resistor-svg .svg-band {
+    cursor: pointer;
+    fill: transparent;
+    transition: all 0.2s ease;
+}
+.resistor-svg .svg-band:hover {
+    stroke: #007bff;
+    stroke-width: 10;
+}
+
+.result {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+h2 {
+    color: #333;
+    margin: 0 0 0.5rem 0;
+}
+#resistance-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0;
+}
+#tcr-value-container {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 0.5rem;
+}
+
+.color-palette {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 0.5rem;
+    z-index: 100;
+}
+#color-name-preview {
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    min-height: 1.2em;
+    text-transform: capitalize;
+}
+#palette-swatches {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.color-swatch:hover {
+    transform: scale(1.1);
+    border-color: #007bff;
+}
